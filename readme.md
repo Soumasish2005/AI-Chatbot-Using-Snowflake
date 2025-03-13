@@ -34,18 +34,16 @@ This project is a Streamlit application that allows users to upload a CSV file a
     pip install streamlit pandas snowflake-connector-python google-generativeai matplotlib seaborn
     ```
 
-3. Configure your Google Gemini API key and Snowflake connection settings in `app.py`:
-    ```python
-    # filepath: ./app.py
+3. Configure your Google Gemini API key and Snowflake connection settings in `.streamlit/secrets.toml`:
+    ```toml
+    # filepath: ./.streamlit/secrets.toml
     GEMINI_API_KEY = "your_google_gemini_api_key"
-    SNOWFLAKE_CONFIG = {
-        "user": "your_snowflake_user",
-        "password": "your_snowflake_password",
-        "account": "your_snowflake_account",
-        "warehouse": "your_snowflake_warehouse",
-        "database": "your_snowflake_database",
-        "schema": "your_snowflake_schema"
-    }
+    SNOWFLAKE_USER = "your_snowflake_user"
+    SNOWFLAKE_PASSWORD = "your_snowflake_password"
+    SNOWFLAKE_ACCOUNT = "your_snowflake_account"
+    SNOWFLAKE_WAREHOUSE = "your_snowflake_warehouse"
+    SNOWFLAKE_DATABASE = "your_snowflake_database"
+    SNOWFLAKE_SCHEMA = "your_snowflake_schema"
     ```
 
 ### Running the Application

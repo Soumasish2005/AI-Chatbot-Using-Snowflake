@@ -6,17 +6,17 @@ import matplotlib.pyplot as plt
 import re
 import seaborn as sns
 # 🔹 Google Gemini API Key
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # 🔹 Snowflake Connection Config
 SNOWFLAKE_CONFIG = {
-    "user": "your_username",
-    "password": "your_password",
-    "account": "your_account",
-    "warehouse": "CHATBOT_WH",
-    "database": "CHATBOT_DB",
-    "schema": "CHATBOT_SCHEMA"
+    "user": st.secrets["SNOWFLAKE_USER"],
+    "password": st.secrets["SNOWFLAKE_PASSWORD"],
+    "account": st.secrets["SNOWFLAKE_ACCOUNT"],
+    "warehouse": st.secrets["SNOWFLAKE_WAREHOUSE"],
+    "database": st.secrets["SNOWFLAKE_DATABASE"],
+    "schema": st.secrets["SNOWFLAKE_SCHEMA"],
 }
 
 def connect_snowflake():
